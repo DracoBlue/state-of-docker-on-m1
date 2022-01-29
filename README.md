@@ -6,17 +6,22 @@ information of the state of how which setup compares in terms of working.
 
 ## Results (on a `MacBook Pro (16", 2021)`)
 
-| Test ID             | Summary                      | [colima](./setups/colima-m1.md)  | [docker-desktop-m1](./setups/docker-desktop-m1.md) |
-|---------------------|------------------------------|----------------------------------|---------------------------------------------------|
-| [t1](./tests/t1.sh) | trusty openresty amd64 image | 🛑                               | 🛑                                                  |
-| [t2](./tests/t2.sh) | alpine openresty amd64 image | ✅                               | ✅                                                  |
-| [t3](./tests/t3.sh) | old stern amd64 image        | 🛑                               | 🛑                                                  |
-| [t4](./tests/t4.sh) | current stern amd64 image    | ✅                               | ✅                                                  |
+| Test ID             | Summary                      | [colima](./setups/colima-m1.md)  | [docker-desktop-m1](./setups/docker-desktop-m1.md) | [ubuntu-amd64](./setups/ubuntu-amd64.md) |
+|---------------------|------------------------------|----------------------------------|---------------------------------------------------|----------------------------------------|
+| [t1](./tests/t1.sh) | trusty openresty amd64 image | 🛑                               | 🛑                                                  | ✅                                      |
+| [t2](./tests/t2.sh) | alpine openresty amd64 image | ✅                               | ✅                                                  | ✅                                      |
+| [t3](./tests/t3.sh) | old stern amd64 image        | 🛑                               | 🛑                                                  | ✅                                      |
+| [t4](./tests/t4.sh) | current stern amd64 image    | ✅                               | ✅                                                  | ✅                                      |
 
 ## Setups
 
-* [colima on m1](./setups/colima-m1.md)
-* [docker-desktop on m1](./setups/docker-desktop-m1.md)
+* M1 Mac Setups
+  * [colima on m1](./setups/colima-m1.md)
+  * [docker-desktop on m1](./setups/docker-desktop-m1.md)
+* Intel Mac Setups
+  * [docker-desktop on intel](./setups/docker-desktop-intel.md)
+* Non Mac Setup (for comparison):
+  * [ubuntu-amd64](./setups/ubuntu-amd64.md)
 
 ## License
 

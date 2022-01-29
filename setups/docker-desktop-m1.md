@@ -1,4 +1,4 @@
-# docker-desktop setup for state-of-docker-on-m1
+# docker-desktop m1 setup for state-of-docker-on-m1
 
 
 ## installation steps
