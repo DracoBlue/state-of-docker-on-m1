@@ -39,7 +39,7 @@ cd tests/
 ls | grep '.sh' | while read file
 do
   sh ./$file
-  if [ "$?" == "0" ]
+  if [ "$?" = "0" ]
   then
     echo " - $file: ✅ OK"
   else

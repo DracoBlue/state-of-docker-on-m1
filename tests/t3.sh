@@ -1,12 +1,12 @@
 #!/bin/sh
 
-if [ "$1" == "description" ]
+if [ "$1" = "description" ]
 then
   echo "old stern amd64 image "
   exit 0
 fi
 
-if [ "$1" == "expected" ]
+if [ "$1" = "expected" ]
 then
   echo "Expected Success: \n"
   cat <<-'EXPECTED_SUCCESS'
@@ -49,7 +49,7 @@ fi
 
 docker run --platform linux/amd64 --rm alpine:latest sh -c 'cd /tmp/ && wget https://github.com/wercker/stern/releases/download/1.11.0/stern_linux_amd64 -q && chmod +x stern_linux_amd64 && ./stern_linux_amd64 --version' 2>&1 | grep 'failed to create new OS thread' > /dev/null
 
-if [ "$?" == "0" ]
+if [ "$?" = "0" ]
 then
   exit 1;
 fi
