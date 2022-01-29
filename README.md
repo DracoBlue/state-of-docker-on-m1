@@ -6,13 +6,13 @@ information of the state of how which setup compares in terms of working.
 
 ## Results
 
-| Test ID             | Summary                      | [colima](./setups/colima-m1.md) | [docker-desktop-m1](./setups/docker-desktop-m1.md) | [minikube-hyperkit-m1](./setups/minikube-hyperkit-m1.md) | [minikube-docker-desktop-m1](./setups/minikube-docker-desktop-m1.md) | [docker-desktop on intel](./setups/docker-desktop-intel.md) | [ubuntu-amd64](./setups/ubuntu-amd64.md) |
-|---------------------|------------------------------|---------------------------------|----------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------|
-|                     |                              | v0.3.2                          | v20.10.12                                          | v1.25.1                                                  |  v1.25.1                                                             | v20.10.12                                                   | v20.10.12                                |
-| [t1](./tests/t1.sh) | trusty openresty amd64 image | 🛑                              | 🛑                                                 | ❌                                                        |  🛑                                                                  | ✅                                                           | ✅                                        |
-| [t2](./tests/t2.sh) | alpine openresty amd64 image | ✅                               | ✅                                                  | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
-| [t3](./tests/t3.sh) | old stern amd64 image        | 🛑                              | 🛑                                                 | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
-| [t4](./tests/t4.sh) | current stern amd64 image    | ✅                               | ✅                                                  | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
+| Test ID             | Summary                      | [rancher-desktop-dockerd on m1](./setups/rancher-desktop-dockerd-m1.md) | [colima](./setups/colima-m1.md) | [docker-desktop-m1](./setups/docker-desktop-m1.md) | [minikube-hyperkit-m1](./setups/minikube-hyperkit-m1.md) | [minikube-docker-desktop-m1](./setups/minikube-docker-desktop-m1.md) | [docker-desktop on intel](./setups/docker-desktop-intel.md) | [ubuntu-amd64](./setups/ubuntu-amd64.md) |
+|---------------------|------------------------------|-------------------------------------------------------------------------|---------------------------------|----------------------------------------------------|----------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------|------------------------------------------|
+|                     |                              | v1.0.0                                                                  |  v0.3.2                         | v20.10.12                        | v1.25.1                                                  |  v1.25.1                                                             | v20.10.12                                                   | v20.10.12                                |
+| [t1](./tests/t1.sh) | trusty openresty amd64 image | 🛑                                                                        | 🛑                                                                      | 🛑                              | ❌                                                        |  🛑                                                                  | ✅                                                           | ✅                                        |
+| [t2](./tests/t2.sh) | alpine openresty amd64 image | ✅                                                                         | ✅                                                                       | ✅                               | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
+| [t3](./tests/t3.sh) | old stern amd64 image        | 🛑                                                                        | 🛑                                                                      | 🛑                              | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
+| [t4](./tests/t4.sh) | current stern amd64 image    | ✅                                                                        | ✅                                                                       | ✅                               | ❌                                                        | ✅                                                                    | ✅                                                           | ✅                                        |
 
 Hints:
 
@@ -21,10 +21,14 @@ Hints:
 ## Setups
 
 * M1 Mac Setups (on a MacBook Pro (16", 2021), Chip: `Apple M1 Pro`)
-  * ⚠️ [colima on m1](./setups/colima-m1.md)
-  * ⚠️ [docker-desktop on m1](./setups/docker-desktop-m1.md)
-  * ❌ [minikube-hyperkit on m1](./setups/minikube-hyperkit-m1.md) (unsupported because of [moby/hyperkit#310](https://github.com/moby/hyperkit/issues/310))
-  * ⚠️ [minikube-docker-desktop on m1](./setups/minikube-docker-desktop-m1.md)
+  * lima vm based:
+    * ⚠️ [rancher-desktop-dockerd on m1](./setups/rancher-desktop-dockerd-m1.md)
+    * ⚠️ [colima on m1](./setups/colima-m1.md)
+  * docker desktop based:
+    * ⚠️ [docker-desktop on m1](./setups/docker-desktop-m1.md)
+    * ⚠️ [minikube-docker-desktop on m1](./setups/minikube-docker-desktop-m1.md)
+  * hyperkit based:
+    * ❌ [minikube-hyperkit on m1](./setups/minikube-hyperkit-m1.md) (unsupported because of [moby/hyperkit#310](https://github.com/moby/hyperkit/issues/310))
 * Intel Mac Setups (on a MacBook Pro (16", 2019), Chip: `Intel Core i9`)
   * ✅ [docker-desktop on intel](./setups/docker-desktop-intel.md)
 * Non Mac Setup (for comparison on Ubuntu x86_64):
