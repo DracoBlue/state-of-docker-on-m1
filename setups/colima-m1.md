@@ -11,7 +11,7 @@ Steps:
 3. Colima with Brew <https://formulae.brew.sh/formula/colima>
 4. Docker-Compose with Brew <https://formulae.brew.sh/formula/docker-compose>
 5. Launch Colima VM
-6. Install binfmt (am64 emulator) into Docker
+6. Install binfmt (amd64 emulator) into Docker
 
 ## Uninstall steps
 
