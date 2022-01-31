@@ -11,3 +11,12 @@ Steps:
 ```console
 $ softwareupdate --install-rosetta
 ```
+
+## uninstall steps
+
+
+Remove from "~/.docker/config.json" the key value
+
+```
+"credsStore" : "desktop",
+```

@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ `which podman` ]
+then
+  echo "--Podman-Info-----------------------------------------------------"
+  podman info
+fi
+
 if [ `which colima` ]
 then
   echo "--Colima-Version--------------------------------------------------"
