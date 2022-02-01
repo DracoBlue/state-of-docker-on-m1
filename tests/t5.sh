@@ -2,7 +2,7 @@
 
 if [ "$1" = "description" ]
 then
-  echo "varnish 6.0.6 image"
+  echo "varnish 6.0.10 image"
   exit 0
 fi
 
