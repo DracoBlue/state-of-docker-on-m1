@@ -21,6 +21,8 @@ else
   echo "Skip minikube, because already available"
 fi
 
+brew upgrade minikube
+
 IS_MINIKUBE_NOT_RUNNING=`minikube status | grep "minikube start" || true`
 if [ "$IS_MINIKUBE_NOT_RUNNING" ]
 then
