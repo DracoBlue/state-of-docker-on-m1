@@ -18,16 +18,15 @@ then
   echo "Install docker"
   brew install docker
 else
-  echo "Skip docker, because already available"
+  echo "Skip docker (cli) install, because already available"
 fi
-
 
 if [ ! `which colima` ]
 then
   echo "Install colima"
   brew install colima
 else
-  echo "Skip colima, because already available"
+  echo "Skip colima install, because already available"
 fi
 
 if [ ! `which docker-compose` ]
@@ -35,8 +34,11 @@ then
   echo "Install docker-compose"
   brew install docker-compose
 else
-  echo "Skip docker-compose, because already available"
+  echo "Skip docker-compose install, because already available"
 fi
+
+echo "perform colima, docker and docker-compose upgrade (if available)"
+brew upgrade colima docker docker-compose
 
 IS_COLIMA_NOT_RUNNING=`colima status 2>&1 | grep "not running" || true`
 if [ "$IS_COLIMA_NOT_RUNNING" ]
