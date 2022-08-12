@@ -21,6 +21,8 @@ else
   echo "Skip podman, because already available"
 fi
 
+echo "upgrade podman version (if available)"
+brew upgrade podman
 
 IS_PODMAN_MACHINE_RUNNING=`podman machine list 2>&1 | grep "podman-machine-default" || true`
 if [ "$IS_PODMAN_MACHINE_RUNNING" ]
